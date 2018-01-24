@@ -1,0 +1,65 @@
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="conatiner">
+    <h2>Create new Coupon</h2>
+    <form (ngSubmit)="createCoupon()">
+        <div class="row">
+            <div class="form-group col-xs-4 col-lg-4">
+                <label for="title">coupon Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="coupon.title" [ngModelOptions]="{standalone: true}" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-4 col-lg-4">
+              <label for="startDate">Coupon start Date:</label>
+              <input type="date" class="form-control input-sm" [(ngModel)]="coupon.startDate"  [ngModelOptions]="{standalone: true}" required>
+            </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-xs-4 col-lg-4">
+            <label for="endDate">Coupon expiration Date:</label>
+            <input type="date" class="form-control input-sm" [(ngModel)]="coupon.endDate"  [ngModelOptions]="{standalone: true}" required>
+          </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-xs-4 col-lg-4">
+          <label for="price">Coupon price:</label>
+          <input type="number" class="form-control input-sm" [(ngModel)]="coupon.price"  [ngModelOptions]="{standalone: true}" required>
+        </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-xs-4 col-lg-4">
+        <label for="amount">Coupon amount:</label>
+        <input type="number" class="form-control input-sm" [(ngModel)]="coupon.amount"  [ngModelOptions]="{standalone: true}" required>
+      </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-4">
+      <label for="type">Coupon type:</label>
+      <select class="form-control input-sm" [(ngModel)]="coupon.type"  [ngModelOptions]="{standalone: true}" required>
+        <option>FOOD</option>
+        <option>HEALTH</option>
+        <option>SPORTS</option>
+        <option>CAMPING</option>
+        <option>TRAVELING</option>
+        <option>RESTAURANTS</option>
+        <option>ELECTRICITY</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-4">
+      <label for="message">Message:</label>
+      <input type="text" class="form-control input-sm" [(ngModel)]="coupon.message" [ngModelOptions]="{standalone: true}" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-group col-xs-4 col-lg-4">
+      <label for="image">Image:</label>
+      <input type="text" class="form-control input-sm" [(ngModel)]="coupon.image" [ngModelOptions]="{standalone: true}" required>
+    </div>
+  </div>
+        <button type="submit" class="btn btn-default">Add new Coupon</button>
+    </form>
+
+</div>
