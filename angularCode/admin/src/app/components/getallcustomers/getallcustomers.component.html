@@ -1,0 +1,16 @@
+
+
+<button type="submit"  (click)="getAllCustomers()">Get all customers</button>  
+
+  <table border="1">
+<tr>
+  <th>ID</th>
+  <th>Customer name</th>
+  <th>password</th>
+</tr>
+<tr *ngFor ="let c of customers">
+  <td>{{c.id}}</td>
+  <td>{{c.custName}}</td>
+  <td>{{c.password}}</td>
+</tr>
+  </table>

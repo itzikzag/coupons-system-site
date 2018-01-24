@@ -1,0 +1,18 @@
+
+
+<button type="submit"  (click)="getAllCompanies()">Get all companies</button>  
+
+  <table border="1">
+<tr>
+  <th>ID</th>
+  <th>company name</th>
+  <th>password</th>
+  <th>email</th>
+</tr>
+<tr *ngFor ="let c of companies">
+  <td>{{c.id}}</td>
+  <td>{{c.companyName}}</td>
+  <td>{{c.password}}</td>
+  <td>{{c.email}}</td>
+</tr>
+  </table>
