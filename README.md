@@ -11,9 +11,9 @@
 * AJAX
 
 # back end
-Spring MVC
-JDBC
-Filter
+* Spring MVC
+* JDBC
+* Filter
 
 
 
