@@ -8,8 +8,7 @@ link to access the web project on a DigitalOcean cloud server.
 
 
 # front end
-* Angular 5: Directives
-* CSS3
+* Angular 5
 * Bootstrap
 * AJAX
 
