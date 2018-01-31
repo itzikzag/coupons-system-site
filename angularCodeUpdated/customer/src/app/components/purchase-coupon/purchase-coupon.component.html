@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="div">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Start Date</th>
+          <th>Expiration Date</th>
+          <th>Amount</th>
+          <th>Type</th>
+          <th>Message</th>
+          <th>Price</th>
+          <th>Image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable-row" data-toggle="modal" data-target="#buyCoupon" *ngFor="let coupon of coupons" (click)="setCoupon(coupon)">
+          <td>{{ coupon.id }}</td>
+          <td>{{ coupon.title }}</td>
+          <td>{{ coupon.startDate }}</td>
+          <td>{{ coupon.endDate }}</td>
+          <td>{{ coupon.amount }}</td>
+          <td>{{ coupon.type }}</td>
+          <td>{{ coupon.message }}</td>
+          <td>{{ coupon.price }}</td>
+          <td>
+            <img src="{{coupon.image}}" class="center-block" style="block-size: 50px">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="buyCoupon" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>{{ coupon.title }}</h3>
+      </div>
+      <div class="modal-body">
+
+        <img class="center-block" src="{{ coupon.image }}" style="block-size:200px;">
+        <button (click)="buyCoupon()" class="btn btn-default center-block">Buy Coupon</button>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
