@@ -1,0 +1,34 @@
+
+      <!-- <h2 >Create New Customr</h2>  
+      
+           
+    
+      
+      Name:<input type="text" id="customerName" [(ngModel)]="customer.custName" />
+      Company Password:<input type="password"  [(ngModel)]="customer.password"  />
+
+      
+
+  <button type="submit"   (click)="createCustomer()">Create New Customr</button> -->
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="conatiner">
+    <h2>Create new Customer</h2>
+    <form (ngSubmit)="createCustomer()">
+        <div class="row">
+            <div class="form-group col-xs-4 col-lg-4">
+                <label for="email">Customer Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="customer.custName" [ngModelOptions]="{standalone: true}" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-xs-4 col-lg-4">
+                <label for="pwd">Customer Password:</label>
+                <input type="password" class="form-control" id="pwd" [(ngModel)]="customer.password" [ngModelOptions]="{standalone: true}" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Add new Customer</button>
+    </form>
+
+</div>

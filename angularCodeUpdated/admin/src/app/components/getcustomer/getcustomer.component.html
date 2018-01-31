@@ -1,0 +1,22 @@
+ID: <input name="numberTxt" type="number" [(ngModel)]= "id"/>
+  <button type="submit"  (click)="getCustomer()">Get customer</button>  
+
+  <table >
+    <thead>
+      <tr>
+        <th>customer ID</th>
+        <th>customer Name</th>
+        <th>customer Password</th>
+        
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{customer.id}}</td>
+        <td>{{customer.custName}}</td>
+        <td>{{customer.password}}</td>
+        
+    </tbody>
+  </table>
+  
+

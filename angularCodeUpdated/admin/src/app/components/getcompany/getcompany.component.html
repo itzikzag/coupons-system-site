@@ -1,0 +1,25 @@
+
+  
+
+ID: <input name="numberTxt" type="number" [(ngModel)]= "id"/>
+  <button type="submit"  (click)="getCompany()">Get Company</button>  
+
+  <table >
+    <thead>
+      <tr>
+        <th>Company ID</th>
+        <th>Company Name</th>
+        <th>Company Password</th>
+        <th>Company Email</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{company.id}}</td>
+        <td>{{company.compName}}</td>
+        <td>{{company.password}}</td>
+        <td>{{company.email}}</td>
+    </tbody>
+  </table>
+  
+
